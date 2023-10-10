@@ -18,6 +18,7 @@ public class EsercizioDue {
         myList.add(456);
         myList.add(23);
         System.out.println(reverseList(myList));
+        evenOddStamp(myList, false);
     }
     public static ArrayList<Integer> orderRandomNumbers (Integer n1) {
         Random randomNumber = new Random();
@@ -34,5 +35,25 @@ public class EsercizioDue {
         Collections.reverse(reversedList);
         newList.addAll(reversedList);
         return newList;
+    }
+    public static void evenOddStamp (ArrayList<Integer> a, Boolean b) {
+        ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
+        ArrayList<Integer> oddNumbers = new ArrayList<Integer>();
+        for (Integer n: a) {
+            if (n % 2 == 0) {
+                evenNumbers.add(n);
+            }else {
+                oddNumbers.add(n);
+            }
+        }
+        if (b.booleanValue()) {
+            for (Integer n: evenNumbers) {
+                System.out.println(n);
+            }
+        }else {
+            for (Integer n: oddNumbers) {
+                System.out.println(n);
+            }
+        }
     }
 }
